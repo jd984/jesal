@@ -1,7 +1,6 @@
 # 💼 My Personal Portfolio
 
-Welcome to my **personal portfolio**, built with Astro — a lightning-fast, minimalist theme powered by Astro, Tailwind CSS, and TypeScript.  
-This portfolio showcases my work and technical projects with performance and simplicity in mind.
+Welcome to my personal portfolio! Here you'll find my latest projects, skills, and achievements as a developer. Explore the live site, check out the features, and feel free to reach out if you'd like to connect or collaborate.
 
 ## 🌐 Live Site
 
@@ -25,9 +24,4 @@ git clone https://github.com/jd984/jesal.git
 cd jesal
 npm install
 npm run dev
-
-
-## 🏛️ License
-
-MIT
 ```
