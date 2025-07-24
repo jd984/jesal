@@ -1,0 +1,152 @@
+---
+import ArrowCard from "@components/ArrowCard.astro";
+import Container from "@components/Container.astro";
+import Link from "@components/Link.astro";
+import WorkCard from "@components/WorkCard.astro";
+import { HOME, SITE, SOCIALS } from "@consts";
+import PageLayout from "@layouts/PageLayout.astro";
+import { getCollection } from "astro:content";
+
+const projects = (await getCollection("projects"))
+  .filter((project) => !project.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, SITE.NUM_PROJECTS_ON_HOMEPAGE);
+
+const allwork = (await getCollection("work"))
+  .sort(
+    (a, b) =>
+      new Date(b.data.dateStart).valueOf() -
+      new Date(a.data.dateStart).valueOf()
+  )
+  .slice(0, SITE.NUM_WORKS_ON_HOMEPAGE);
+
+const work = await Promise.all(
+  allwork.map(async (item) => {
+    const { Content } = await item.render();
+    return { ...item, Content };
+  })
+);
+
+const skillsData = await getCollection("skills");
+const skills = skillsData[0].data.skills ?? [];
+---
+
+<PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
+  <Container>
+    <h2 class="animate font-semibold text-black dark:text-white">
+      Hello World!
+    </h2>
+    <div class="space-y-16">
+      <!-- Hero section -->
+      <section>
+        <article class="space-y-4">
+          <p class="animate">
+            I'm Jesal, a tech enthusiast who loves turning ideas into clean,
+            functional web experiences. I’m passionate about writing code that’s
+            not just efficient, but also readable, maintainable, and scalable.
+          </p>
+
+          <p class="animate">
+            While I currently specialize in frontend development, I’m actively
+            expanding my skill set toward fullstack development using MERN stack
+            technologies, aiming to craft complete solutions from frontend
+            interactions to backend logic and data management.
+          </p>
+        </article>
+      </section>
+
+      <!-- Projects -->
+      <section class="animate space-y-6">
+        <div class="flex flex-wrap gap-y-2 items-center justify-between">
+          <h5 class="font-semibold text-black dark:text-white">
+            Recent projects
+          </h5>
+          <Link href="/projects"> See all projects </Link>
+        </div>
+        <ul class="flex flex-col gap-4">
+          {
+            projects.map((project) => (
+              <li>
+                <ArrowCard entry={project} />
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <!-- Skills -->
+      <section class="animate space-y-6">
+        <h5 class="font-semibold text-black dark:text-white">Skills</h5>
+        <ul class="flex flex-wrap gap-2">
+          {
+            skills.map((skill) => (
+              <li
+                class="cursor-pointer relative group flex items-center justify-center px-4 py-2 rounded-md border border-black/10 dark:border-white/20 bg-white/70 dark:bg-white/5 
+         text-sm font-medium text-black dark:text-white 
+         hover:bg-black/10 dark:hover:bg-white/10 
+         hover:text-black dark:hover:text-white 
+         transition-colors duration-300 ease-in-out shadow-sm"
+              >
+                {skill}
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <!-- Experience -->
+      <section class="animate space-y-6">
+        <div class="flex flex-wrap gap-y-2 items-center justify-between">
+          <h5 class="font-semibold text-black dark:text-white">
+            Work Experience
+          </h5>
+        </div>
+        <ul class="flex flex-col gap-4">
+          {
+            work.map((entry) => (
+              <li>
+                <WorkCard entry={entry} />
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <!-- Contact -->
+      <section class="animate space-y-4">
+        <h5 class="font-semibold text-black dark:text-white">Let's Connect</h5>
+        <article>
+          <p>
+            I'm currently open for exciting full-time roles. If you're looking
+            for someone who's passionate and ready to contribute — reach out on
+            social media or send me an email.
+          </p>
+        </article>
+        <ul class="flex flex-wrap gap-2">
+          {
+            SOCIALS.map((SOCIAL) => (
+              <li class="flex gap-x-2 text-nowrap">
+                <Link
+                  href={SOCIAL.HREF}
+                  external
+                  aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}
+                >
+                  {SOCIAL.NAME}
+                </Link>
+                {"/"}
+              </li>
+            ))
+          }
+          <li class="line-clamp-1">
+            <Link
+              href={`mailto:${SITE.EMAIL}`}
+              aria-label={`Email ${SITE.NAME}`}
+            >
+              {SITE.EMAIL}
+            </Link>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </Container>
+</PageLayout>

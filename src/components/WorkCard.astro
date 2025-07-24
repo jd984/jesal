@@ -1,0 +1,56 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+type Props = {
+  entry: CollectionEntry<"work">;
+};
+
+const { entry } = Astro.props;
+---
+
+<a
+  href={`/${entry.collection}/${entry.slug}`}
+  class="relative group flex flex-col gap-1 py-3 px-4 pr-10 rounded-lg
+         border border-black/15 dark:border-white/20
+         hover:bg-black/5 dark:hover:bg-white/5
+         hover:text-black dark:hover:text-white
+         transition-colors duration-300 ease-in-out"
+>
+  <!-- Date range -->
+  <div
+    class="text-xs text-gray-600 dark:text-gray-400 group-hover:text-inherit"
+  >
+    {
+      entry.data.dateStart.toLocaleString("default", {
+        month: "short",
+        year: "numeric",
+      })
+    }
+    -
+    {
+      typeof entry.data.dateEnd === "string"
+        ? entry.data.dateEnd
+        : (entry.data.dateEnd?.toLocaleString("default", {
+            month: "short",
+            year: "numeric",
+          }) ?? "Present")
+    }
+  </div>
+
+  <!-- Company Name -->
+  <div class="font-semibold text-sm truncate">
+    {entry.data.company}
+  </div>
+
+  <!-- Role -->
+  <div class="text-sm opacity-80">
+    {entry.data.role}
+  </div>
+
+  <!-- Description -->
+  <div
+    class="text-sm text-gray-600 dark:text-gray-400 mt-1 line-clamp-3 group-hover:text-inherit"
+  >
+    {entry.data.description}
+  </div>
+</a>

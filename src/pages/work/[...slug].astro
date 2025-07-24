@@ -1,0 +1,33 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/Container.astro";
+import BackToPrev from "@components/BackToPrev.astro";
+
+export async function getStaticPaths() {
+  const workEntries = await getCollection("work");
+  return workEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: entry,
+  }));
+}
+
+type Props = CollectionEntry<"work">;
+
+const work = Astro.props;
+const { Content } = await work.render();
+---
+
+<PageLayout title={work.data.company} description={work.data.description}>
+  <Container>
+    <!-- Back link -->
+    <div class="animate mb-6">
+      <BackToPrev href="/"> Home </BackToPrev>
+    </div>
+
+    <!-- Description + Markdown -->
+    <article class="animate prose dark:prose-invert">
+      <Content />
+    </article>
+  </Container>
+</PageLayout>
