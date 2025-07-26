@@ -2,7 +2,7 @@
 company: "Demaze Technologies"
 role: "Fullstack Intern"
 dateStart: "01/02/2023"
-dateEnd: "25/06/2023"
+dateEnd: "31/07/2023"
 description: "Worked on fullstack web applications using React, Node.js, and MongoDB. Built responsive UIs, RESTful APIs, and gained practical experience."
 ---
 
