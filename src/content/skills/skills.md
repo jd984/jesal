@@ -1,18 +1,24 @@
 ---
 title: "Skills"
 skills:
-  - JavaScript
+  - JavaScript (ES6+)
   - TypeScript
   - React.js
+  - Next.js (App Router)
   - Redux
-  - Next.js
-  - Next Auth
   - Zustand
-  - Tailwind CSS
-  - Shadcn
+  - TanStack Query
+  - TailwindCSS
+  - Shadcn/ui
   - Node.js
   - Express.js
+  - REST API Design
+  - Prisma ORM
+  - Appwrite
+  - PostgreSQL
   - MongoDB
+  - Jest
+  - React Testing Library
   - Git & GitHub
 ---
 

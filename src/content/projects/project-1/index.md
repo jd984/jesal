@@ -1,7 +1,7 @@
 ---
 title: "StoreIt"
 description: "A cloud-based file management app with categorized views and user sharing."
-date: "Jun 15 2024"
+date: "Jul 25 2025"
 demoURL: "https://store-it-seven-gamma.vercel.app/"
 repoURL: "https://github.com/jd984/store-it"
 ---

@@ -1,25 +1,29 @@
 ---
 company: "Concetto Labs"
-role: "Junior Software Engineer"
+role: "Software Engineer"
 dateStart: "01/01/2024"
 dateEnd: "Current"
-description: "Building scalable and optimized web applications using React, Next.js, and TypeScript. Focused on writing reusable components and delivering seamless user experiences."
+description: "Building scalable and high-performance web applications using React, Next.js, TypeScript, and TanStack Query with a focus on reusable architecture, SEO optimization, and frontend performance."
 ---
 
-## 💼 Junior Software Engineer — Concetto Labs
+## 💼 Software Engineer — Concetto Labs
 
 _Jan 2024 – Present_
 
-At [Concetto Labs](https://www.concettolabs.com/), I work as a Frontend Developer, building dynamic and scalable web applications using **React**, **Next.js**, **Redux Toolkit**, and **TanStack Query**. My focus is on creating efficient, maintainable codebases and enhancing user experience across various projects.
+At [Concetto Labs](https://www.concettolabs.com/), I build scalable and performance-focused web applications using **React**, **Next.js (App Router)**, **TypeScript**, **Redux**, and **TanStack Query**. I work on production-grade client projects with a strong focus on reusable architecture, frontend optimization, SEO improvements, and seamless user experiences.
 
 ### 🔧 Key Contributions
 
-- 🧱 **Reusable Component Development**: Developed reusable React components that improved code efficiency and enhanced long-term maintainability across multiple projects, resulting in a **30% reduction** in development time for new features.
-- ⚡ **API Performance Optimization**: Optimized API integration with React TanStack Query, enhancing application performance and providing more efficient data fetching, caching, and synchronization.
-- 🧠 **Memory Management**: Enhanced memory management by integrating automated data resets in TanStack Query for [Jobalots](https://jobalots.com/en), reducing memory usage by **25%** and periodically freeing up resources to improve overall application performance.
-- 🔍 **SEO & UX Enhancements**: Improved SEO and user experience by adding schema markup to product pages and developing a dynamic, category-wise sitemap, resulting in better search visibility and a **70% reduction** in sitemap load time.
-- 🔁 **Smooth Navigation UX**: Developed "Load More" and "Load Previous" functionality on the [Bargainfox](https://bargainfox.com/en) product listing page, enabling smooth navigation by preserving scroll position when returning from product detail pages, significantly improving the overall user experience.
-- 🧩 **State & Form Handling**: Implemented state management with React Redux Toolkit to optimize data flow and integrated React Hook Form for efficient form handling and validation in [Elitechem](https://www.elitechem.com/), ensuring seamless user input management and validation.
-- 🚀 **Production Deployments**: Deployed applications to live servers for production use in [Elitechem](https://www.elitechem.com/), ensuring seamless user access and system stability.
+- 🧱 **Reusable React Architecture**: Built reusable **React + TypeScript component libraries** across multiple client products including [Jobalots](https://jobalots.com/en), [EliteChem](https://www.elitechem.com/), and [BargainFox](https://bargainfox.com/en), reducing new feature development time by **30%**.
 
-This role has helped me strengthen my skills in frontend architecture, performance tuning, and scalable code design while collaborating in real-world production environments.
+- ⚡ **TanStack Query Optimization**: Architected advanced **TanStack Query** integration for Jobalots with automated cache cleanup and optimized data synchronization, reducing client-side memory usage by **25%** on high-frequency listing pages.
+
+- 🔍 **SEO & Sitemap Improvements**: Enhanced SEO for Jobalots by implementing **JSON-LD schema markup** and dynamic category-based sitemap generation in **Next.js**, reducing sitemap load time by **70%** and improving search engine visibility.
+
+- 🖼️ **Image & Performance Optimization**: Improved image delivery in EliteChem using **Next.js Image**, responsive image handling, lazy loading, and built-in optimization techniques, contributing to faster page loads and better **Core Web Vitals** performance.
+
+- 📜 **Advanced Listing Experience**: Boosted BargainFox product listing performance by implementing **dynamic pagination**, **virtualized scrolling**, and **scroll-position restoration**, improving navigation experience and reducing bounce rates on slower connections.
+
+- 🚀 **Production Deployments**: Managed and shipped production-ready deployments while ensuring application stability, responsive UI behavior, and scalable frontend architecture across client projects.
+
+This role has strengthened my expertise in frontend performance engineering, scalable React architecture, caching strategies, and building maintainable production applications.

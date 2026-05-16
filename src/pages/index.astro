@@ -16,7 +16,7 @@ const allwork = (await getCollection("work"))
   .sort(
     (a, b) =>
       new Date(b.data.dateStart).valueOf() -
-      new Date(a.data.dateStart).valueOf()
+      new Date(a.data.dateStart).valueOf(),
   )
   .slice(0, SITE.NUM_WORKS_ON_HOMEPAGE);
 
@@ -24,7 +24,7 @@ const work = await Promise.all(
   allwork.map(async (item) => {
     const { Content } = await item.render();
     return { ...item, Content };
-  })
+  }),
 );
 
 const skillsData = await getCollection("skills");
@@ -41,16 +41,55 @@ const skills = skillsData[0].data.skills ?? [];
       <section>
         <article class="space-y-4">
           <p class="animate">
-            I'm Jesal, a tech enthusiast who loves turning ideas into clean,
-            functional web experiences. I’m passionate about writing code that’s
-            not just efficient, but also readable, maintainable, and scalable.
+            I’m <strong>Jesal</strong>, a <strong>Software Engineer</strong> with
+            <strong>2+ years of experience</strong> building production web applications
+            using <strong>React</strong>, <strong>Next.js</strong>,
+            <strong>TypeScript</strong>, and <strong>Node.js</strong>. I focus
+            on
+            <strong>scalable frontend architecture</strong>,
+            <strong>reusable components</strong>, and
+            <strong>performance optimization</strong> to deliver fast and maintainable
+            user experiences.
           </p>
 
           <p class="animate">
-            While I currently specialize in frontend development, I’m actively
-            expanding my skill set toward fullstack development using MERN stack
-            technologies, aiming to craft complete solutions from frontend
-            interactions to backend logic and data management.
+            Currently at <a
+              href="https://www.concettolabs.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-semibold underline"
+            >
+              Concetto Labs
+            </a>, I’ve worked on products like
+            <a
+              href="https://jobalots.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-semibold underline"
+            >
+              Jobalots
+            </a>,
+            <a
+              href="https://elitechem.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-semibold underline"
+            >
+              EliteChem
+            </a>, and
+            <a
+              href="https://bargainfox.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-semibold underline"
+            >
+              BargainFox
+            </a>, improving <strong>SEO</strong>,
+            <strong>performance</strong>, <strong>caching</strong>, and
+            <strong>frontend scalability</strong> by contributing to
+            <strong>30% faster development</strong>,
+            <strong>25% lower memory usage</strong>, and
+            <strong>35% better page performance</strong>.
           </p>
         </article>
       </section>
@@ -117,9 +156,10 @@ const skills = skillsData[0].data.skills ?? [];
         <h5 class="font-semibold text-black dark:text-white">Let's Connect</h5>
         <article>
           <p>
-            I'm currently open for exciting full-time roles. If you're looking
-            for someone who's passionate and ready to contribute — reach out on
-            social media or send me an email.
+            Open to exciting full-time opportunities in frontend and full-stack
+            development. If you’re building impactful products and need a
+            developer who cares about performance, scalability, and clean UI —
+            feel free to reach out.
           </p>
         </article>
         <ul class="flex flex-wrap gap-2">
