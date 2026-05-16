@@ -1,7 +1,7 @@
 ---
 title: "Skills"
 skills:
-  - JavaScript (ES6+)
+  - JavaScript
   - TypeScript
   - React.js
   - Next.js (App Router)
