@@ -4,7 +4,7 @@ skills:
   - JavaScript
   - TypeScript
   - React.js
-  - Next.js (App Router)
+  - Next.js
   - Redux
   - Zustand
   - TanStack Query
@@ -13,13 +13,14 @@ skills:
   - Node.js
   - Express.js
   - REST API Design
-  - Prisma ORM
-  - Appwrite
   - PostgreSQL
-  - MongoDB
   - Jest
   - React Testing Library
-  - Git & GitHub
+  - Vitest
+  - SEO Optimization
+  - Core Web Vitals
+  - Responsive Design
+  - HTML/CSS
 ---
 
 A collection of my most used and proficient development skills.

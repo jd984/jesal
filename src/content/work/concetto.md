@@ -10,11 +10,11 @@ description: "Building scalable and high-performance web applications using Reac
 
 _Jan 2024 – Present_
 
-At [Concetto Labs](https://www.concettolabs.com/), I build scalable and performance-focused web applications using **React**, **Next.js (App Router)**, **TypeScript**, **Redux**, and **TanStack Query**. I work on production-grade client projects with a strong focus on reusable architecture, frontend optimization, SEO improvements, and seamless user experiences.
+At [Concetto Labs](https://www.concettolabs.com/), I build scalable and performance-focused web applications using **React**, **Next.js**, **TypeScript**, **Redux**, and **TanStack Query**. I work on production-grade client projects with a strong focus on reusable architecture, frontend optimization, SEO improvements, and seamless user experiences.
 
 ### 🔧 Key Contributions
 
-- 🧱 **Reusable React Architecture**: Built reusable **React + TypeScript component libraries** across multiple client products including [Jobalots](https://jobalots.com/en), [EliteChem](https://www.elitechem.com/), and [BargainFox](https://bargainfox.com/en), reducing new feature development time by **30%**.
+- 🧱 **Reusable React Components**: Built reusable **React + TypeScript components** used across multiple client products including [Jobalots](https://jobalots.com/en), [EliteChem](https://www.elitechem.com/), and [BargainFox](https://bargainfox.com/en), reducing new feature development time by **30%**.
 
 - ⚡ **TanStack Query Optimization**: Architected advanced **TanStack Query** integration for Jobalots with automated cache cleanup and optimized data synchronization, reducing client-side memory usage by **25%** on high-frequency listing pages.
 
@@ -22,7 +22,11 @@ At [Concetto Labs](https://www.concettolabs.com/), I build scalable and performa
 
 - 🖼️ **Image & Performance Optimization**: Improved image delivery in EliteChem using **Next.js Image**, responsive image handling, lazy loading, and built-in optimization techniques, contributing to faster page loads and better **Core Web Vitals** performance.
 
-- 📜 **Advanced Listing Experience**: Boosted BargainFox product listing performance by implementing **dynamic pagination**, **virtualized scrolling**, and **scroll-position restoration**, improving navigation experience and reducing bounce rates on slower connections.
+- 📜 **Advanced Listing Experience**: Boosted BargainFox product listing performance by **45%** through implementing **dynamic pagination**, **virtualized scrolling**, and **scroll-position restoration**, improving navigation experience and reducing bounce rates on slower connections.
+
+- 🚀 **React → Next.js Migration (Fovero)**: Led end-to-end migration of the production Fovero application from React to Next.js, increasing PageSpeed score from **22 to 85** via server-side rendering (SSR), aggressive code splitting, and image optimization.
+
+- 💚 **Nuxt/Vue Delivery**: Delivered a production application using **Nuxt.js, Vue.js, TypeScript, and Pinia**, implementing scalable state management patterns and reusable UI components that accelerated feature delivery timelines.
 
 - 🚀 **Production Deployments**: Managed and shipped production-ready deployments while ensuring application stability, responsive UI behavior, and scalable frontend architecture across client projects.
 
